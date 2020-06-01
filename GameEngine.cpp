@@ -3,9 +3,9 @@
 GameEngine::GameEngine() {
 	m_Resolution.x = VideoMode::getDesktopMode().width;
 	m_Resolution.y = VideoMode::getDesktopMode().height;
-	m_Window.create(VideoMode(m_Resolution.x, m_Resolution.y), "Little Mage", Style::Titlebar);
+	m_Window.create(VideoMode(m_Resolution.x, m_Resolution.y), "Little Mage", Style::Fullscreen);
 
-	//SCREEN MANAGER
+	m_ScreenManager = unique_ptr<ScreenManager>(new ScreenManager(Vector2i(m_Resolution.x, m_Resolution.y)));
 }
 
 void GameEngine::run() {
@@ -19,15 +19,15 @@ void GameEngine::run() {
 }
 
 void GameEngine::handleInput() {
-	// SCREEN MANAGER
+	m_ScreenManager->handleInput(m_Window);
 }
 
 void GameEngine::update() {
-	// SCREEN MANAGER
+	m_ScreenManager->update(m_FPS);
 }
 
 void GameEngine::draw() {
 	m_Window.clear(Color::Black);
-	// Screen Manager
-	m_Window.display;
+	m_ScreenManager->draw(m_Window);
+	m_Window.display();
 }

@@ -16,7 +16,7 @@ protected:
 	float m_ButtonPadding = 0;
 
 	Font m_Font;
-	Font m_Text;
+	Text m_Text;
 
 	void addButton(float x, float y, int width, int height,
 		int red, int green, int blue, string label);

@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-//#include "ScreenManager.h"
+#include "ScreenManager.h"
 //#include "SoundEngine.h"
 
 using namespace sf;
@@ -11,7 +11,7 @@ private:
 	Time m_DT;
 	RenderWindow m_Window;
 
-	//SCREEN MANAGER
+	unique_ptr<ScreenManager> m_ScreenManager;
 
 	float m_FPS = 0;
 	Vector2f m_Resolution;
@@ -22,7 +22,7 @@ private:
 
 public:
 
-	//SOUND ENGINE
+	//SoundEngine m_SoundEngine;
 
 	GameEngine();
 	void run();

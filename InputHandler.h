@@ -29,7 +29,7 @@ public:
 
 	View* getPointerToUIView();
 
-	ScreenManagerRemoteControl* getPointerToScreenManagerControl();
+	ScreenManagerRemoteControl* getPointerToScreenManagerRemoteControl();
 
 	Screen* getmParentScreen();
 };

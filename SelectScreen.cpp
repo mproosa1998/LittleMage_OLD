@@ -1,11 +1,11 @@
 #include "SelectScreen.h"
-#include "SelectUIPanel.h"
-#include "SelectInputHandler.h"
+#include "StartUIPanel.h"
+#include "StartInputHandler.h"
 
 SelectScreen::SelectScreen(
 	ScreenManagerRemoteControl* smrc, Vector2i res) {
-	auto suip = make_unique<SelectUIPanel>(res);
-	auto sih = make_shared<SelectInputHandler>();
+	auto suip = make_unique<StartUIPanel>(res);
+	auto sih = make_shared<StartInputHandler>();
 	addPanel(move(suip), smrc, sih);
 	m_ScreenManagerRemoteControl = smrc;
 

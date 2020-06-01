@@ -42,7 +42,7 @@ View* InputHandler::getPointerToUIView() {
 	return m_PointerToUIPanelView;
 }
 
-ScreenManagerRemoteControl* InputHandler::getPointerToScreenManagerControl() {
+ScreenManagerRemoteControl* InputHandler::getPointerToScreenManagerRemoteControl() {
 	return m_ScreenManagerRemoteControl;
 }
 

@@ -2,9 +2,9 @@
 #include <SFML/Graphics.hpp>
 #include <map>
 #include <iostream>
-//#include "GameScreen.h"
+#include "GameScreen.h"
 #include "ScreenManagerRemoteControl.h"
-//#include "StartScreen.h"
+#include "SelectScreen.h"
 //#include "LevelManager.h"
 #include "BitmapStore.h"
 
@@ -29,7 +29,7 @@ public:
 	// FROM ScreenManagerRemoteControl interface
 	void ScreenManagerRemoteControl::SwitchScreens(string screenToSwitchTo) {
 		m_CurrentScreen = "" + screenToSwitchTo;
-		m_Screens[m_CurrentScreen]->initialize();
+		m_Screens[m_CurrentScreen]->initialise();
 	}
 
 	void ScreenManagerRemoteControl::LoadLevelInPlayMode(string screenToLoad) {
