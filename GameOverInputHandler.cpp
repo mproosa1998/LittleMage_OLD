@@ -16,7 +16,7 @@ void GameOverInputHandler::handleLeftClick(std::string& buttonInteractedWith, Re
 		WorldState::LEVEL_NUMBER = 0;
 		getPointerToScreenManagerRemoteControl()->LoadLevelInPlayMode("level1");
 	}
-	else if (buttonInteractedWith == "Home") {
+	else if (buttonInteractedWith == "Title Screen") {
 		//SoundEngine::playClick();
 		getPointerToScreenManagerRemoteControl()->SwitchScreens("Start");
 	}

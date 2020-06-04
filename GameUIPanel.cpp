@@ -4,7 +4,7 @@
 
 int WorldState::HEALTH;
 
-GameUIPanel::GameUIPanel(Vector2i res) : UIPanel(res, 1, 1, res.x / 3, res.y / 12, 100, 255, 255, 255) {
+GameUIPanel::GameUIPanel(Vector2i res) : UIPanel(res, 1, 1, res.x / 3, res.y / 12, 50, 255, 255, 255) {
 	m_Text.setFillColor(sf::Color(0, 255, 0, 255));
 	m_Text.setString("Health: 3");
 	m_Font.loadFromFile("font/LittleMageFont.ttf");
